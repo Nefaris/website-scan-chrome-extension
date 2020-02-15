@@ -1,0 +1,43 @@
+{
+	"name": "Fast analyzer",
+	"version": "1.0",
+	"description": "As name says.",
+	"manifest_version": 2,
+	"browser_action": {
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"activeTab",
+		"tabs",
+		"storage"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"https://*.gtmetrix.com/*"
+			],
+			"js": [
+				"gtmetrix.js"
+			],
+			"run_at": "document_end"
+		},
+		{
+			"matches": [
+				"https://*.tools.pingdom.com/*"
+			],
+			"js": [
+				"pingdom.js"
+			],
+			"run_at": "document_end"
+		},
+		{
+			"matches": [
+				"https://*.developers.google.com/speed/pagespeed/insights/*"
+			],
+			"js": [
+				"insights.js"
+			],
+			"run_at": "document_end"
+		}
+	]
+}

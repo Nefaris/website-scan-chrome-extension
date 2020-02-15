@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+#searchForm {
+	display: flex;
+	align-items: center;
+}
+
+#searchInput,
+#searchButton,
+#clearInput {
+	outline: none;
+	padding: 10px;
+}
+
+#searchInput {
+	border-radius: 5px 0 0 5px;
+	border: solid 1px #1d1d1d;
+}
+
+#searchButton {
+	border: solid 1px #1d1d1d;
+	border-left: none;
+}
+
+#clearInput {
+	border-radius: 0 5px 5px 0;
+	border: solid 1px #1d1d1d;
+	border-left: none;
+}
